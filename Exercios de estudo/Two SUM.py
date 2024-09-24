@@ -11,15 +11,17 @@ class Inserir_dados:
 
 class Solution():
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        indice_resultado = []
+        indice_resultado = {}
 
         for i, num in enumerate(nums):
             valor = target - num
-            if valor in nums:
-                indice_resultado.append(i)
-        print(indice_resultado)
+            if valor in indice_resultado:
 
-        return;
+                return [indice_resultado[valor], i]
+
+            indice_resultado[num] = i
+
+        return None
 
 dados = Inserir_dados()
 
@@ -27,4 +29,4 @@ dados.Inserindo_dados()
 
 resultado = Solution()
 
-resultado.twoSum(dados.nums, dados.target)
+print(resultado.twoSum(dados.nums, dados.target))
