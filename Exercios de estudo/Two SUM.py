@@ -1,8 +1,5 @@
 from typing import List
 
-import self
-
-
 class Inserir_dados:
     def __init__(self):
         self.nums = []
@@ -12,15 +9,15 @@ class Inserir_dados:
 
         self.target = int(input("Digite o valor de Terget: "))
 
-
-
 class Solution():
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         indice_resultado = []
 
         for i, num in enumerate(nums):
-            valor = num - target
-            print(valor)
+            valor = target - num
+            if valor in nums:
+                indice_resultado.append(i)
+        print(indice_resultado)
 
         return;
 
@@ -31,5 +28,3 @@ dados.Inserindo_dados()
 resultado = Solution()
 
 resultado.twoSum(dados.nums, dados.target)
-
-print(resultado.twoSum(dados.nums, dados.target))
