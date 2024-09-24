@@ -14,5 +14,6 @@ class Solution:
         return indice_resultado;
 
 
+
 sol= Solution()
 print(sol.twoSum(nums,target))

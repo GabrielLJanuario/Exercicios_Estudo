@@ -16,9 +16,7 @@ class Solution():
         for i, num in enumerate(nums):
             valor = target - num
             if valor in indice_resultado:
-
                 return [indice_resultado[valor], i]
-
             indice_resultado[num] = i
 
         return None
