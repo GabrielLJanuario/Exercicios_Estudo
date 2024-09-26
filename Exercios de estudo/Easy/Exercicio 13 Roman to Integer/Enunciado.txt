@@ -1,0 +1,44 @@
+13. Romano para Inteiro
+Os algarismos romanos são representados por sete símbolos diferentes: , , , , e .IVXLCDM
+
+Symbol       Value
+I             1
+V             5
+X             10
+L             50
+C             100
+D             500
+M             1000
+Por exemplo, é escrito como em algarismo romano, apenas dois somados. é escrito como , que é simplesmente . O número é escrito como , que é .2II12XIIX + II27XXVIIXX + V + II
+
+Os algarismos romanos são geralmente escritos do maior para o menor, da esquerda para a direita. No entanto, o numeral para quatro não é . Em vez disso, o número quatro é escrito como . Como o um está antes do cinco, nós o subtraímos fazendo quatro. O mesmo princípio se aplica ao número nove, que é escrito como . Existem seis casos em que a subtração é usada:IIIIIVIX
+
+I pode ser colocado antes de (5) e (10) para fazer 4 e 9. VX
+X pode ser colocado antes de (50) e (100) para fazer 40 e 90. LC
+C pode ser colocado antes de (500) e (1000) para fazer 400 e 900.DM
+Dado um numeral romano, converta-o em um número inteiro.
+
+
+
+Exemplo 1:
+
+Input: s = "III"
+Output: 3
+Explanation: III = 3.
+Exemplo 2:
+
+Input: s = "LVIII"
+Output: 58
+Explanation: L = 50, V= 5, III = 3.
+Exemplo 3:
+
+Input: s = "MCMXCIV"
+Output: 1994
+Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
+
+
+Restrições:
+
+1 <= s.length <= 15
+s contém apenas os caracteres .('I', 'V', 'X', 'L', 'C', 'D', 'M')
+É garantido que é um numeral romano válido no intervalo .s[1, 3999]
