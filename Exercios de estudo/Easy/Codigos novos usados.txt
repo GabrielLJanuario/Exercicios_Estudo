@@ -1,0 +1,2 @@
+linha_com_mais_caracteres = max(palavras, key=len)
+Onde serve para encontrar a linha com o maior número de caracteres
