@@ -1,9 +1,9 @@
-14. Prefixo comum mais longo
+14. Prefixo comum mais longo:
 Escreva uma função para encontrar a maior string de prefixo comum entre uma matriz de strings.
 Se não houver um prefixo comum, retorne uma string vazia "".
 
-Exemplo 1:S
 
+Exemplo 1:S
 Entrada: strs = ["flor","fluxo","voo"]
  Saída: "fl"
 Exemplo 2:
