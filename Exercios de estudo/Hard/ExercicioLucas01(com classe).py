@@ -34,13 +34,14 @@ class Leituta():
             data3_dif = None
         return data1_dif,data2_dif,data3_dif
 
-    def ConvertData(self,data1_dif,data2_dif,data3_dif):
+    def MenorData(self,data1_dif,data2_dif,data3_dif):
         if data1_dif is not None:
             data_dif=data1_dif
             if data2_dif is not None:
                 data_dif = min(data1_dif, data2_dif)
                 if data3_dif is not None:
                     data_dif=min(data1_dif,data2_dif,data3_dif)
+        return data_dif
 
     def ExibeResultado(self,data_dif,data1_dif,data2_dif,data3_dif):
         if data_dif == data1_dif and data1_dif is not None:
@@ -50,11 +51,10 @@ class Leituta():
                 if data_dif == data3_dif and data3_dif is not None:
                     print("A data mais perto da data atual é NewestLawsuitsDate com " + data_dif + " de diferença")
 
-leitura=Leituta()
-leitura.ConvertData(first_date,second_date,tird_date)
-leitura.ConvertData()
-leitura.ExibeResultado()
-
+leitura = Leituta()
+data1_dif, data2_dif, data3_dif = leitura.ConvertData()
+data_dif = leitura.MenorData(data1_dif, data2_dif, data3_dif)
+leitura.ExibeResultado(data_dif, data1_dif, data2_dif, data3_dif)
 
 
 
