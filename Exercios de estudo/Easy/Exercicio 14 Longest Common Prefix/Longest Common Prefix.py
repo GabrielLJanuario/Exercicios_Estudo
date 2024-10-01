@@ -1,35 +1,22 @@
-from typing import List
+from typing import List, Counter
 
-from Tools.scripts.summarize_stats import print_title
-
-strs=["flower","flow","flight"]
+strs=["cir","car"]
 
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
-        list_prefixo=[]
-        i=0
-        j=0
+        resposta=[]
         palavras=[list(strs) for strs in strs]
-        menor_linha=min(palavras, key=len) # Encontrar a linha com o maior número de caracteres
-        for i in range(len(palavras)):
-            for j in range(len(menor_linha)):
-                if palavras[i][j]==menor_linha[j]:
-                    print()
-                else:
-                    break
+        menor_linha=min(palavras, key=len) # Encontrar a linha com o menor número de caracteres
+        for i in range(len(menor_linha)):
+            for j in range(len(palavras)):
+                if palavras[j][i] != menor_linha[i]: # Verifica na menor lista se a letra que est no indice é igual a da lista palavras
+                    return ''.join(resposta)
+            resposta.append(menor_linha[i])
 
 
-
-
-
-
-
-
-
-
-
+        return ''.join(resposta)
 
 
 
 sol= Solution()
-sol.longestCommonPrefix(strs)
+print(sol.longestCommonPrefix(strs))

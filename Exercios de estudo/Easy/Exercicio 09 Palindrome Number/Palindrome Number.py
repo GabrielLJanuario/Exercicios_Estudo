@@ -12,8 +12,6 @@ class Solution:
                 return False
         else:
             num_invert = str(num)[::-1]
-            # num_str = int(num_str)
-            # num_str = num_str * -1
             print("From left to right, it reads " + str(num) + " . From right to left, it becomes " + str(num_invert) + ". Therefore it is not a palindrome.")
             return False
         return;
