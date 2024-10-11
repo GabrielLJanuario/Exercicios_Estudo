@@ -15,7 +15,8 @@ time.sleep(3)
 pyautogui.write("https://dlp.hashtagtreinamentos.com/python/intensivao/login")
 pyautogui.press("enter")
 time.sleep(3)
-pyautogui.click(x=692, y=392) # Comando para clicar na posição especificada em x e y
+pyautogui.click(x=628, y=354) # Comando para clicar na posição especificada em x e y
+time.sleep(2)
 pyautogui.write("Gabriel.j@gmail.com")
 pyautogui.press("tab")
 pyautogui.write("123456")
